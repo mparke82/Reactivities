@@ -29,6 +29,7 @@ namespace API
                     // Applies pending migrations for the context to the database
                     // and creates database if it does not already exist
                     context.Database.Migrate();
+                    Seed.SeedData(context); // Seed data to DB
                 }
                 catch(Exception ex) 
                 {
